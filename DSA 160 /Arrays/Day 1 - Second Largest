@@ -1,0 +1,19 @@
+https://www.geeksforgeeks.org/dsa/find-second-largest-element-array/
+
+
+class Solution {
+    public int getSecondLargest(int[] arr) 
+    {
+     Arrays.sort(arr);
+     int n=arr.length;
+     for(int i=arr.length-2;i>=0;i--)
+     {
+         if(arr[i]!=arr[n-1])
+         {
+             return arr[i];
+         }
+     }
+     return -1;
+        
+    }
+}
